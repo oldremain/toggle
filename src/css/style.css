@@ -1,0 +1,183 @@
+@import 'https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Kaushan+Script&family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&family=Poppins&family=Raleway:wght@400;500;700;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active, a:link {
+  outline: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+body {
+  --primary-color: #e7e0ee;
+  --sec-color: #f3f1f5;
+  --hover-color: #11052c;
+  --color: #1f1f1f;
+  --text-color: #f3f1f5;
+}
+
+body[data-theme=dark] {
+  --primary-color: #0f0f0f;
+  --sec-color: #1a1a1a;
+  --hover-color: #ededed;
+  --color: #f0f0f0;
+  --text-color: #1f1f1f;
+}
+body[data-theme=dark] .btn {
+  background-color: violet;
+  -webkit-box-shadow: 0 0 10px violet;
+          box-shadow: 0 0 10px violet;
+}
+body[data-theme=dark] .btn:hover {
+  background: violet;
+  -webkit-box-shadow: 0 0 15px 2px violet;
+          box-shadow: 0 0 15px 2px violet;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: var(--primary-color);
+  color: var(--color);
+}
+
+.person-card {
+  width: 350px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+  background: var(--sec-color);
+  border-radius: 10px;
+}
+
+.person-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.person-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+  cursor: pointer;
+  /* background: var(--sec-color); */
+  background: var(--hover-color);
+  color: var(--text-color);
+  /* color: var(--color); */
+  margin-top: 1em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.darkMode {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.darkMode .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: var(--sec-color);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.darkMode input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-appearance: none;
+}
+
+.darkMode input:checked ~ .box {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.darkMode input:checked ~ .box i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}

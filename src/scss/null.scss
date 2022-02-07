@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active,a:link{outline: none; color: inherit;}
+
+button{cursor: pointer;}
+a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
